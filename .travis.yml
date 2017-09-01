@@ -4,7 +4,7 @@ mono: none
 dotnet: 1.0.1
 dist: trusty
 install:
-  - nuget restore SampleWebAPI.sln
+  - dotnet restore #SampleWebAPI.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release SampleWebAPI.sln
